@@ -1,0 +1,144 @@
+/* Importando fuente personalizada desde Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Creando variables en CSS */
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+/* El asterisco modifica universalmente a los elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /* El "vh" significa "viewport height" Lo que hara que la pagina se muestre todo a lo alto */
+    /* height: 100vh; */
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header_menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #22D4FD;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.presentacion_contenido_titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+}
+
+.titulo-destacado {
+    color: var(--color-terciario);
+}
+
+.presentacion_contenido_parrafo {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_enlaces {
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_saludo {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    text-align: center;
+    width: 50%;
+    border: 2px solid var(--color-terciario);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.presentacion_enlaces_link:hover {
+    background-color: var(--color-hover);
+}
+
+.imagen {
+    width: 50%;
+}
+
+.footer {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+}
+
+/* Definimos el comportamiento de la pagina en pantallas pequenas */
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion_contenido {
+        width: auto;
+    }
+
+}
